@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="uft-8">
+    <title>Js-Ejercicio2</title>
+    <link rel="stylesheet" href="styles.css">
+
+  
+</head>
+
+<body>
+    <div class="title">
+        <H1>
+            Son Chaeyoung
+        </H1>
+        <hr>
+
+    </div>
+    <h1>Move Son Chaeyoung ~~</h1>
+    <div class="table">
+        <!--Aqui inicia Boton Izquierdo-->
+        <div class="cell">
+            <div class="cell"></div>
+
+            <div class="row">
+                <form>
+                    <input type="button" value="Izquierda" onclick="movLeft()">
+                </form>
+                <div class="row"></div>
+
+            </div>
+        </div>
+        <!--Aqui inicia Boton Arriba-->
+        <div class="cell">
+            <div class="row">
+                <form>
+                    <input type="button" value="Arriba" onclick="movTop()">
+
+                </form>
+            </div>
+
+
+            <!--Aqui inicia boton restaurar-->
+            <div class="row">
+                <form>
+                    <input type="button" value="Reset" onclick="Reset()">
+                </form>
+            </div>
+            <!--Aqui Inicia boton Abajo-->
+            <div class="row">
+                <form>
+                    <input type="button" value="Abajo" onclick="movButtom()">
+                </form>
+            </div>
+
+
+
+
+        </div>
+        <!--Aqui inicia Boton Derecho
+        
+         <input type="image" value="Derecha" onclick="movLeft(this)" src="Derecha.png">
+         <input type="button" value="Derecha" onclick="movLeft(this)">-->
+        <div class="cell">
+            <div class="cell"></div>
+
+            <div class="row">
+                <form>
+
+                    <input type="button" value="Derecha" onclick="movRight()">
+                    
+                </form>
+            </div>
+
+            <div class="row"></div>
+        </div>
+        <img id="div_imagen"src="chaeyoung.jfif" alt="Son chaeyoung - Twice">
+ 
+
+    </div>
+
+    <!--Con un div y dentro la imagen, izq y derecha hacen movimiento de atras y enfrente,
+    al mismo tiempo, derecha izq.-->
+      
+
+
+    <script>
+        let vtop = 320;
+        let vleft = 450;
+
+        let mov_imagen = document.getElementById("div_imagen");
+        mov_imagen.style.cssText = `top: ${vtop}px; left:${vleft}px`;
+
+
+        function movTop() {
+            vtop = vtop - 20;
+            mov_imagen.style.top = vtop + "px";
+
+
+        }
+
+        /*Izquierda*/
+        function movLeft() {
+            vleft = vleft - 20;
+            mov_imagen.style.left = vleft + "px";
+            console.log("oli");
+        }
+        /*Derecha*/
+        function movRight() {
+            vleft = vleft + 20;
+            mov_imagen.style.left = vleft + "px";
+
+
+        }
+
+        function movButtom() {
+            vtop = vtop + 20;
+            mov_imagen.style.top = vtop + "px";
+
+
+        }
+
+
+        function Reset() {
+            let vtop = 320;
+            let vleft = 450;
+            mov_imagen.style.top=vtop+"px";
+            mov_imagen.style.left=vleft+"px";
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>

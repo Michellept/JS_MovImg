@@ -1,0 +1,46 @@
+body{
+    background-image: url("Fondo.jpg");
+}
+
+#div_imagen{    
+    padding-left:20%;
+    position: absolute;
+    
+}
+
+img{
+    width: 15%;
+    
+}
+
+.cell{
+    display: table-cell;
+    
+    padding-bottom: 5%;
+}
+
+.row{
+
+    background-color: #ffffff;
+    opacity: 0.6;
+    display: table-row;
+   
+    
+}
+
+.table{
+    
+    display: table;
+  
+}
+
+
+h1{
+    font-family: sans-serif;
+    font-size: 200%;
+    letter-spacing: 10px;
+    text-align: center;
+    padding: 2%;
+    color: white;
+}
+

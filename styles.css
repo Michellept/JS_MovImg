@@ -5,6 +5,7 @@ body{
 #div_imagen{    
     padding-left:20%;
     position: absolute;
+    border-radius: 10%;
     
 }
 
